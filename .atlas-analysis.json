@@ -1,0 +1,110 @@
+{
+  "projectType": "ai-ml",
+  "projectName": "Fraud Detection ML System",
+  "projectDescription": "End-to-end machine learning system for detecting fraudulent credit card transactions with production-ready REST API and monitoring.",
+  "theme": "aspen",
+  "primaryColor": "#FF6B35",
+  "lightColor": "#FFA07A",
+  "darkColor": "#CC5529",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/dataset",
+              "concepts/model-architecture",
+              "concepts/evaluation-metrics"
+            ]
+          },
+          {
+            "group": "Training & Development",
+            "pages": [
+              "training/data-preprocessing",
+              "training/model-training",
+              "training/hyperparameter-tuning",
+              "training/evaluation"
+            ]
+          },
+          {
+            "group": "API Reference",
+            "pages": [
+              "api/overview",
+              "api/endpoints",
+              "api/schemas",
+              "api/error-handling"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/monitoring",
+              "deployment/production"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/making-predictions",
+              "guides/batch-processing",
+              "guides/custom-thresholds"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Model Details",
+        "groups": [
+          {
+            "group": "Analysis",
+            "pages": [
+              "model/exploratory-analysis",
+              "model/feature-importance",
+              "model/performance-metrics"
+            ]
+          },
+          {
+            "group": "Results",
+            "pages": [
+              "model/comparison",
+              "model/cross-validation",
+              "model/confusion-matrix"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "XGBoost model with 85.24% AUPRC for fraud detection",
+    "Handles highly imbalanced datasets (0.17% fraud rate)",
+    "Hyperparameter optimization using Optuna Bayesian search",
+    "MLflow experiment tracking and model versioning",
+    "FastAPI REST API with single and batch prediction endpoints",
+    "Prometheus metrics and Grafana dashboards for monitoring",
+    "Docker containerization for deployment",
+    "Comprehensive data preprocessing and feature scaling"
+  ],
+  "publicApiSurface": [
+    "POST /api/predict - Single transaction fraud prediction",
+    "POST /api/predict/batch - Batch transaction predictions",
+    "GET /api/health - Health check endpoint",
+    "GET /metrics - Prometheus metrics endpoint",
+    "TransactionInput - Input schema with V1-V28 PCA features and Amount",
+    "PredictionResponse - Fraud probability and classification response",
+    "train_model() - Train XGBoost model with optimized parameters",
+    "predict_fraud() - Predict fraud probability for transactions",
+    "predict_fraud_class() - Classify transactions as fraud/legitimate"
+  ]
+}
